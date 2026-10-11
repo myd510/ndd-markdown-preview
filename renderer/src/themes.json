@@ -1,0 +1,30 @@
+{
+  "_comment": "主题清单（构建期读取）。markdown 项会按 src 拷贝到 resources/themes/markdown/，并生成运行期清单 themes.json。",
+  "markdown": [
+    { "id": "github-light",   "label": "GitHub 浅色",  "src": "github-markdown-css/github-markdown-light.css", "out": "github-light.css",   "dark": false },
+    { "id": "github-dark",    "label": "GitHub 深色",  "src": "github-markdown-css/github-markdown-dark.css",  "out": "github-dark.css",    "dark": true  },
+    { "id": "water-light",    "label": "Water 浅色",   "src": "water.css/out/light.css",                       "out": "water-light.css",    "dark": false },
+    { "id": "water-dark",     "label": "Water 深色",   "src": "water.css/out/dark.css",                        "out": "water-dark.css",     "dark": true  },
+    { "id": "sakura",         "label": "Sakura 粉樱",  "src": "sakura.css/css/sakura.css",                     "out": "sakura.css",         "dark": false },
+    { "id": "sakura-dark",    "label": "Sakura 深色",  "src": "sakura.css/css/sakura-dark.css",                "out": "sakura-dark.css",    "dark": true  },
+    { "id": "sakura-earthly", "label": "Sakura 大地",  "src": "sakura.css/css/sakura-earthly.css",             "out": "sakura-earthly.css", "dark": false },
+    { "id": "marx",           "label": "Marx 复古",    "src": "marx-css/css/marx.min.css",                     "out": "marx.css",           "dark": false },
+    { "id": "latex",          "label": "LaTeX 论文",   "src": "latex.css/dist/style.css",                      "out": "latex.css",          "dark": false },
+    { "id": "tufte",          "label": "Tufte 书籍",   "src": "tufte-css/tufte.min.css",                       "out": "tufte.css",          "dark": false }
+  ],
+  "mermaid": [
+    { "id": "default",           "label": "Mermaid 默认" },
+    { "id": "dark",              "label": "Mermaid 深色" },
+    { "id": "forest",            "label": "Mermaid 森林" },
+    { "id": "neutral",           "label": "Mermaid 中性" },
+    { "id": "dracula",           "label": "Dracula" },
+    { "id": "catppuccin-mocha",  "label": "Catppuccin Mocha" },
+    { "id": "catppuccin-latte",  "label": "Catppuccin Latte" },
+    { "id": "nord",              "label": "Nord" },
+    { "id": "tokyo-night",       "label": "Tokyo Night" },
+    { "id": "solarized-dark",    "label": "Solarized Dark" },
+    { "id": "solarized-light",   "label": "Solarized Light" },
+    { "id": "one-dark",          "label": "One Dark" },
+    { "id": "gruvbox",           "label": "Gruvbox" }
+  ]
+}

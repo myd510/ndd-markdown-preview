@@ -1,0 +1,118 @@
+{
+  "markdown": [
+    {
+      "id": "github-light",
+      "label": "GitHub 浅色",
+      "file": "themes/markdown/github-light.css",
+      "dark": false
+    },
+    {
+      "id": "github-dark",
+      "label": "GitHub 深色",
+      "file": "themes/markdown/github-dark.css",
+      "dark": true
+    },
+    {
+      "id": "water-light",
+      "label": "Water 浅色",
+      "file": "themes/markdown/water-light.css",
+      "dark": false
+    },
+    {
+      "id": "water-dark",
+      "label": "Water 深色",
+      "file": "themes/markdown/water-dark.css",
+      "dark": true
+    },
+    {
+      "id": "sakura",
+      "label": "Sakura 粉樱",
+      "file": "themes/markdown/sakura.css",
+      "dark": false
+    },
+    {
+      "id": "sakura-dark",
+      "label": "Sakura 深色",
+      "file": "themes/markdown/sakura-dark.css",
+      "dark": true
+    },
+    {
+      "id": "sakura-earthly",
+      "label": "Sakura 大地",
+      "file": "themes/markdown/sakura-earthly.css",
+      "dark": false
+    },
+    {
+      "id": "marx",
+      "label": "Marx 复古",
+      "file": "themes/markdown/marx.css",
+      "dark": false
+    },
+    {
+      "id": "latex",
+      "label": "LaTeX 论文",
+      "file": "themes/markdown/latex.css",
+      "dark": false
+    },
+    {
+      "id": "tufte",
+      "label": "Tufte 书籍",
+      "file": "themes/markdown/tufte.css",
+      "dark": false
+    }
+  ],
+  "mermaid": [
+    {
+      "id": "default",
+      "label": "Mermaid 默认"
+    },
+    {
+      "id": "dark",
+      "label": "Mermaid 深色"
+    },
+    {
+      "id": "forest",
+      "label": "Mermaid 森林"
+    },
+    {
+      "id": "neutral",
+      "label": "Mermaid 中性"
+    },
+    {
+      "id": "dracula",
+      "label": "Dracula"
+    },
+    {
+      "id": "catppuccin-mocha",
+      "label": "Catppuccin Mocha"
+    },
+    {
+      "id": "catppuccin-latte",
+      "label": "Catppuccin Latte"
+    },
+    {
+      "id": "nord",
+      "label": "Nord"
+    },
+    {
+      "id": "tokyo-night",
+      "label": "Tokyo Night"
+    },
+    {
+      "id": "solarized-dark",
+      "label": "Solarized Dark"
+    },
+    {
+      "id": "solarized-light",
+      "label": "Solarized Light"
+    },
+    {
+      "id": "one-dark",
+      "label": "One Dark"
+    },
+    {
+      "id": "gruvbox",
+      "label": "Gruvbox"
+    }
+  ]
+}

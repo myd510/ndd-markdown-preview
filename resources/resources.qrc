@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/ndd">
+        <file>css/fonts/KaTeX_AMS-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Caligraphic-Bold.woff2</file>
+        <file>css/fonts/KaTeX_Caligraphic-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Fraktur-Bold.woff2</file>
+        <file>css/fonts/KaTeX_Fraktur-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Main-Bold.woff2</file>
+        <file>css/fonts/KaTeX_Main-BoldItalic.woff2</file>
+        <file>css/fonts/KaTeX_Main-Italic.woff2</file>
+        <file>css/fonts/KaTeX_Main-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Math-BoldItalic.woff2</file>
+        <file>css/fonts/KaTeX_Math-Italic.woff2</file>
+        <file>css/fonts/KaTeX_SansSerif-Bold.woff2</file>
+        <file>css/fonts/KaTeX_SansSerif-Italic.woff2</file>
+        <file>css/fonts/KaTeX_SansSerif-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Script-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Size1-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Size2-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Size3-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Size4-Regular.woff2</file>
+        <file>css/fonts/KaTeX_Typewriter-Regular.woff2</file>
+        <file>css/highlight-github-dark.min.css</file>
+        <file>css/highlight-github-light.min.css</file>
+        <file>css/katex.min.css</file>
+        <file>css/ndd-preview.css</file>
+        <file>js/mermaid.min.js</file>
+        <file>js/polyfills.js</file>
+        <file>js/preview.bundle.js</file>
+        <file>preview.html</file>
+        <file>themes/markdown/github-dark.css</file>
+        <file>themes/markdown/github-light.css</file>
+        <file>themes/markdown/latex.css</file>
+        <file>themes/markdown/marx.css</file>
+        <file>themes/markdown/sakura-dark.css</file>
+        <file>themes/markdown/sakura-earthly.css</file>
+        <file>themes/markdown/sakura.css</file>
+        <file>themes/markdown/tufte.css</file>
+        <file>themes/markdown/water-dark.css</file>
+        <file>themes/markdown/water-light.css</file>
+        <file>themes/themes.json</file>
+    </qresource>
+</RCC>

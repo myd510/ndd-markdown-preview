@@ -1,0 +1,21 @@
+# 构建产物
+build/
+build-*/
+libs/
+
+# 前端依赖
+renderer/node_modules/
+
+# IDE / 工程文件
+*.user
+*.pro.user
+.vs/
+.vscode/
+.idea/
+.moc/
+.obj/
+.ui/
+
+# 系统
+.DS_Store
+Thumbs.db

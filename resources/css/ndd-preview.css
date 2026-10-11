@@ -1,0 +1,129 @@
+/* ------------------------------------------------------------------
+ * Notepad-- Markdown 预览 —— 插件自有样式
+ * 与 github-markdown-css 主题配合，负责：布局、滚动条、Mermaid 容器、
+ * 错误提示、代码块、KaTeX 溢出处理等。
+ * ------------------------------------------------------------------ */
+
+:root {
+  --ndd-bg: #0d1117;
+  --ndd-fg: #e6edf3;
+  --ndd-border: #30363d;
+  --ndd-code-bg: #161b22;
+  --ndd-error-bg: #3d1418;
+  --ndd-error-fg: #ff7b72;
+  --ndd-accent: #2f81f7;
+}
+
+html[data-theme="light"] {
+  --ndd-bg: #ffffff;
+  --ndd-fg: #1f2328;
+  --ndd-border: #d1d9e0;
+  --ndd-code-bg: #f6f8fa;
+  --ndd-error-bg: #ffebe9;
+  --ndd-error-fg: #cf222e;
+  --ndd-accent: #0969da;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--ndd-bg);
+  color: var(--ndd-fg);
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC",
+               "Hiragino Sans GB", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 滚动容器 */
+#scroller {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* 正文容器：github-markdown-css 的 .markdown-body 会接管排版 */
+#content.markdown-body {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 32px 120px;
+  background: transparent;
+  color: var(--ndd-fg);
+}
+
+/* 滚动条（Chromium / QtWebEngine） */
+#scroller::-webkit-scrollbar { width: 12px; height: 12px; }
+#scroller::-webkit-scrollbar-track { background: transparent; }
+#scroller::-webkit-scrollbar-thumb {
+  background: rgba(140, 148, 158, .5);
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+#scroller::-webkit-scrollbar-thumb:hover { background: rgba(140, 148, 158, .8); background-clip: content-box; }
+
+/* 表格横向滚动 */
+.markdown-body table { display: block; width: max-content; max-width: 100%; overflow: auto; }
+
+/* 代码块 */
+.markdown-body pre.hljs {
+  padding: 14px 16px;
+  border-radius: 8px;
+  overflow: auto;
+  background: var(--ndd-code-bg);
+}
+.markdown-body pre.hljs code { background: transparent; padding: 0; font-size: 13px; line-height: 1.55; }
+.markdown-body code { font-family: Consolas, "Cascadia Mono", "JetBrains Mono", Menlo, monospace; }
+
+/* Mermaid 图容器 */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+  padding: 8px;
+  background: transparent;
+}
+.mermaid svg { max-width: 100%; height: auto; }
+
+/* 错误提示框（Mermaid 等渲染失败时） */
+.ndd-error {
+  border: 1px solid var(--ndd-error-fg);
+  background: var(--ndd-error-bg);
+  color: var(--ndd-error-fg);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-size: 13px;
+}
+.ndd-error-title { font-weight: 600; margin-bottom: 6px; }
+.ndd-error pre { margin: 0; white-space: pre-wrap; word-break: break-word; background: transparent; color: inherit; }
+
+/* KaTeX 块级公式横向溢出 */
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+
+/* 脚注 */
+.markdown-body .footnotes { font-size: 90%; opacity: .92; }
+
+/* 锚点链接悬停时不显示下划线 */
+.markdown-body .header-anchor { text-decoration: none; }
+
+/* 目录 */
+.markdown-body nav.table-of-contents {
+  border: 1px solid var(--ndd-border);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 16px 0;
+}
+.markdown-body nav.table-of-contents > ul { margin: 0; }
+
+/* 空内容占位 */
+#content:empty::before {
+  content: "（当前文档为空，或尚未打开文件）";
+  color: #8b949e;
+  font-style: italic;
+}

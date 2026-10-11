@@ -1,0 +1,47 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 16, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "architecture": { "value": "x64", "strategy": "set" },
+      "binaryDir": "${sourceDir}/build"
+    },
+    {
+      "name": "default",
+      "displayName": "Qt 5.15.2 msvc2019_64 + VS2022",
+      "description": "导入库模式（无需 ndd 源码）。使用前请设置环境变量 QT_DIR（Qt kit 目录）与 NDD_PLUGIN_DIR（Notepad-- 插件目录）。",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "$env{QT_DIR}/lib/cmake",
+        "QSCINT_LIB": "${sourceDir}/libs/qmyedit_qt5.lib",
+        "NDD_PLUGIN_DIR": "$env{NDD_PLUGIN_DIR}"
+      }
+    },
+    {
+      "name": "source",
+      "displayName": "Qt 5.15.2 + Notepad-- 源码树",
+      "description": "源码模式。使用前请设置环境变量 QT_DIR 与 NDD_ROOT（Notepad-- 源码根目录）。",
+      "inherits": "base",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "$env{QT_DIR}/lib/cmake",
+        "NDD_ROOT": "$env{NDD_ROOT}"
+      }
+    },
+    {
+      "name": "v141",
+      "displayName": "Qt 5.15.2 + v141 工具集",
+      "description": "若默认 v143 链接或运行异常，安装「MSVC v141 - VS 2017 C++ 生成工具」组件后改用此预设。",
+      "inherits": "default",
+      "toolset": { "value": "v141", "strategy": "set" },
+      "binaryDir": "${sourceDir}/build-v141"
+    }
+  ],
+  "buildPresets": [
+    { "name": "default", "configurePreset": "default", "configuration": "Release" },
+    { "name": "source",  "configurePreset": "source",  "configuration": "Release" },
+    { "name": "v141",    "configurePreset": "v141",    "configuration": "Release" }
+  ]
+}

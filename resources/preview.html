@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markdown 预览</title>
+
+  <!-- KaTeX（LaTeX 数学公式） -->
+  <link rel="stylesheet" href="css/katex.min.css">
+
+  <!-- Markdown 主题：由宿主通过 NDDPreview.setMarkdownTheme(file, dark) 切换 -->
+  <link id="css-theme" rel="stylesheet" href="themes/markdown/github-light.css">
+
+  <!-- 代码高亮主题（明/暗，由 JS 切换 disabled；初始与默认浅色主题一致） -->
+  <link id="css-hl-light" rel="stylesheet" href="css/highlight-github-light.min.css">
+  <link id="css-hl-dark" rel="stylesheet" href="css/highlight-github-dark.min.css" disabled>
+
+  <!-- 插件自有样式 -->
+  <link rel="stylesheet" href="css/ndd-preview.css">
+</head>
+<body>
+  <div id="scroller">
+    <article id="content" class="markdown-body"></article>
+  </div>
+
+  <!-- Chromium 77 兼容垫片：必须在 mermaid 与渲染内核之前加载 -->
+  <script src="js/polyfills.js"></script>
+  <!-- Mermaid：自带全部图类型的独立构建，暴露全局 window.mermaid（已降级到 chrome77） -->
+  <script src="js/mermaid.min.js"></script>
+  <!-- 渲染内核：markdown-it + 全套扩展 + KaTeX 插件 + highlight.js -->
+  <script src="js/preview.bundle.js"></script>
+</body>
+</html>
